@@ -26,7 +26,7 @@ $profile_url = get_edit_profile_url( $user_id );
 if ( 0 != $user_id ) {
 /* Add the "My Account" menu */
 $avatar = get_avatar( $user_id, 28 );
-$howdy = sprintf( __('Welcome, %1$s'), $current_user->display_name );
+$howdy = sprintf( __( PSTWELCOME.', %1$s'), $current_user->display_name );
 $class = empty( $avatar ) ? '' : 'with-avatar';
 
 $wp_admin_bar->add_menu( array(
