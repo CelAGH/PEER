@@ -1,0 +1,40 @@
+<?php
+//======POLISH===========//
+
+//=====CREATE POLL=======//
+
+define('CPTITLE', "Nazwa:");
+define('CPTITLEDESC', "Podaj krótki tytuł");
+
+define('CPWHERE', "Miejsce:");
+define('CPWHEREDESC', "Wskaż lokal/miejsce wydarzenia");
+
+define('CPDESC', "Opis:");
+define('CPDESCDESC', "Podaj krótki opis wydarzenia");
+
+define('CPOWNER', "Właściciel:");
+define('CPAUTHOR', "Autor:");
+
+define('CPSELDATES', "Wybierz termin");
+define('CPSELDATESDESC', "(max. 8 możliwości) klikając w kalendarz");
+
+define('CPDATES', "Wybrane terminy:");
+define('CPSUBMIT', "Prześlij:");
+
+define('CPTIME', "Czas:");
+define('CPTIMEDESC', "Wprowadź godzinę dla kolejnych dat");
+
+define('CPDAY', "Dzień:");
+define('CPSUBMIT', 'Prześlij');
+
+
+
+/*define('
+define('
+define('
+define('
+define('
+define('  
+*/
+
+?>

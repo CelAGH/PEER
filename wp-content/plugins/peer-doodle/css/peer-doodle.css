@@ -1,0 +1,51 @@
+/* 
+    Document   : peer-doodle
+    Created on : 2013-02-06, 13:04:28
+    Author     : Kamil Wojtczak
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+label.error {
+    display: inline-block;
+    clear: both;
+    color: red;
+}
+
+#peerPoll{
+
+border: 4px #888888 solid;
+
+background-color: #ebebeb;
+
+padding: 8px;
+
+font-size: inherit;
+font-weight: inherit;
+font-family: Arial, Helvetica, sans-serif;
+font-style: normal;
+letter-spacing: 0.025em;
+-webkit-border-radius: 15px;
+-moz-border-radius: 15px;
+border-radius: 15px;
+
+-moz-box-shadow: 0px 0px 2px 3px #c6c9c5;
+-webkit-box-shadow: 0px 0px 2px 3px #c6c9c5;
+box-shadow: 0px 0px 2px 3px #c6c9c5;
+}
+
+.datagrid 
+
+table { border-collapse: collapse; text-align: left; width: 100%; } 
+
+.datagrid {font: normal 16px/150% Arial, Helvetica, sans-serif; background: #fff; overflow: hidden; border: 1px solid #8C8C8C; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
+.datagrid table td, 
+.datagrid table th { padding: 3px 10px; }
+.datagrid table tbody td { color: #000000; border-left: 1px solid #DBDBDB;font-size: 13px;border-bottom: 1px solid #E1EEF4; font-weight: normal; }
+.datagrid table tbody .alt td { background: #EBEBEB; color: #000000; }
+.datagrid table tbody td:first-child { border-left: none; }
+.datagrid table tbody tr:last-child td { border-bottom: none; }

@@ -1,0 +1,252 @@
+<?php // Extract shortcode attributes, set defaults
+extract(shortcode_atts(array(
+            'poll_id' => ''
+                ), $atts)
+);
+
+
+
+
+if (!class_exists('DPC_Doodle_Poll'))
+    require_once( dirname(__FILE__) . '/class-dpc-poll.php' );
+
+$current_user = wp_get_current_user();
+
+$poll_id = $atts['poll_id'];
+global $wpdb;
+$query = "SELECT * FROM " . $wpdb->prefix . 'peer_doodle' . " WHERE poll_id = ". $poll_id ;
+$model = $wpdb->get_results($query);
+$doodle= new DPC_Doodle_Poll($model[0]);
+if(isset($model[0])) {
+    
+} else {
+    $doodle->build_xml();
+}
+
+if (isset($_GET['action_name'])){
+
+$author = $_GET['author_name'];
+$title = $_GET['poll_name'];
+
+if ($_GET['action_name']=="delete_poll") {
+$doodle->delpoll($title);
+}
+
+}
+
+$options = array();
+$options = $doodle->getOptionsHeaders();
+
+$visibility = $doodle->getVisible();
+
+//$visibility = 1;
+if ($visibility == 1){
+?>
+
+<div id="peerPoll">
+<br>
+<div class="datagrid" >
+                <table>
+			<tbody>
+			<tr class="title"><td colspan="5"><font size="3"><b>Title:</b> <?php echo $doodle->getTitle();?></font></td></tr>
+			<tr class="alt"><td colspan="5" ><b>Description:</b> <?php echo $doodle->getDescription();?></td></tr>
+			<tr>
+				<td><b>Where:</b> <?php echo $doodle->getLocation();?></td>
+				<td><b>Author:</b> <?php echo $doodle->getUsername();?></td>
+				<td><b>Participants:</b> <?php echo $doodle->getNumberOfParticipants();?></td>
+				<td><?php $poll_latest_change = $doodle->getLatestChange(); 
+	       			$poll_latest_change = substr($poll_latest_change, 0, -15); ?>
+	 				<b>Created:</b> <?php echo $poll_latest_change; ?></td>
+				<td><p align="center">
+		<?php
+		if ($current_user->user_login == $doodle->getUsername()){
+		?>
+                <form action="" method="get">
+			 <input type="hidden" name="action_name" value="delete_poll"/>
+			 <input type="hidden" name="poll_name" value="<?php echo $doodle->getTitle();?>"/>
+           		 <input type="submit" value="Delete poll" />
+                </form> 
+		<?php
+		} 
+		?>   
+	
+                                   
+ </p></td>
+			</tr>	
+
+			</tbody>		
+                </table>
+</div>
+           
+        
+	<form class="clearfix">
+           
+<div class="datagrid" >
+                <table summary="<?php echo $doodle->getTitle(); ?>">
+                    <tbody style="text-align: center;">
+                      
+			  <?php 
+				//WYSWIETLA DNI I MIESIACE
+                            $colspans_month = array();
+                            $colspans_days = array();
+                            $c = 0;
+                            //print_r($options['structure']);
+                            foreach ($options['structure'] as $year_key => $year) {
+                                foreach ($year as $month_key => $month) {                        
+                                    foreach ($month as $day) {                                        
+                                        $colspans_days[$c]['counter'] = $day['counter'];
+                                        if(array_key_exists('startdatetime', $day)) {
+                                            //loop through options
+                                             $colspans_days[$c]['startdatetime'] = $day['startdatetime'];
+                                             $colspans_days[$c]['enddatetime'] = $day['enddatetime'];
+                                        } else if(array_key_exists('date', $day)) {                                            
+                                            $colspans_days[$c]['date'] = $day['date'][0];
+                                        } else if(array_key_exists('datetime', $day)) {
+                                            foreach($day['datetime'] as $d) {
+                                               $colspans_days[$c]['datetime'] = $day['datetime']; 
+                                            }
+                                           
+                                        }
+ 
+                                        $colspans_month[$month_key]['counter'] +=$day['counter'];
+                                        $c++;    
+                                    }
+                                }                                
+                            }
+                            
+                         
+                        ?> 
+
+
+                            <tr class="alt">
+                                <td></td>
+                                <?php
+                                    foreach ($options['structure'] as $year_key => $year) {
+                                        foreach ($year as $month_key => $month) { 
+                                            
+                                            ?>
+                                            <td  colspan=<?php echo $colspans_month[$month_key]['counter']; ?>>
+                                                
+                                                <?php
+                                                
+                                                echo date("F", mktime(0,0,0,$month_key+1,0,0));
+                                                echo " " . $year_key;
+                                                ?>
+                                            </td><?php
+                                        	} ?>   
+                                  <?php } ?>       
+                                                                     
+                            </tr>
+
+
+                             <tr>
+                                <td></td>
+                                <?php
+					 $licznik = 0;
+                                    foreach ($colspans_days as $date) {
+						$licznik = $licznik + 1; 
+						 ?>
+                                        
+                                        <td colspan=<?php echo $date['counter']; ?>>
+                                            <b>
+                                                <?php
+							
+                                                //print_r($date['datetime']);
+                                                    if(array_key_exists('startdatetime', $date))
+                                                        echo date("D d", strtotime($date['startdatetime']));
+                                                    else if(array_key_exists('date', $date)) 
+                                                        echo date("D d", strtotime($date['date']));
+                                                    else if(array_key_exists('datetime', $date))
+                                                        echo date("D d", strtotime($date['datetime'][0]));
+								
+								echo "<br>";
+								echo $doodle -> getDate($licznik);
+								echo "<br>";
+								$licznik1 = $licznik * 11;
+								echo $doodle -> getDate($licznik1);
+					
+								
+                                                ?>
+                                           </b>
+                                        </td>
+                                           
+                               <?php } ?>                                                                            
+                            </tr>
+                            
+
+                            <?php 
+                                //participants
+                                $p_votes = $doodle->getParticipantsVotes();
+                                //print_r($p_votes);
+                                foreach($p_votes as $votes) { ?>
+                                    <tr>
+                                        <td><b>
+                                            <div class="pname" title="<?php echo $votes['name']?>"><?php echo $votes['name']?></div>
+                                        </b> </td>
+                                     <?php 
+                                     foreach($votes['option'] as $opts) { ?>
+                                        <td>
+                                            <?php if($opts == 1) {?>
+                                                <img src="./../wp-content/plugins/peer-doodle/images/yes.png"><br>Yes
+                                            <?php }else {?>
+                                                <img src="./../wp-content/plugins/peer-doodle/images/no.png"><br>No
+
+                                            <?php }?>
+                                        </td>
+                             	 <?php } ?>
+                                     </tr>
+                        	    <?php }?>
+                            
+ 
+                         
+                             <tr>
+                                <td>
+					 
+					<?php
+					$doodle_participant = $current_user->user_firstname . ' ' . $current_user->user_lastname;
+					?>
+
+                                    <input required="required" class="required" type="text" value=" <?php echo $doodle_participant; ?>"  name="participant_name" id="participant_name" > </input>
+
+                                    <input type="hidden" name="action_name" id="action_name" value="participant_votes"/>
+                                    <input type="hidden" name="poll" value="<?php echo $doodle->getPollId();?>" />
+                                    <input type="hidden" name="options_counter" value="<?php echo count($options['dates']);?>" />
+                                </td>
+                                <?php $i=0;
+                                    
+                                  foreach ($options['dates'] as $option) { ?>
+                                    <td class="msep" ><input class="msep" type="checkbox" name="option-<?php echo $i++?>"/></td>
+                                    
+                                <?php
+                                }
+                                ?>
+                            </tr> 
+                            
+                            <tr>
+                                <td class="msep" ></td>
+                                <?php for($i=0;$i<count($options['dates']);$i++ ) {
+                                    if($i == (count($options['dates'])-1)){ ?>
+                                        <td>
+                                            <input class="dpc_submit_participant button button-primary" type="submit" value="Save" name="dpc_submit_participant" />
+                                        </td>
+                                <?php
+                                    } else {?>
+                                        <td></td>  
+                                <?php 
+                                    }
+                                }
+                                ?>
+                            </tr> 
+                          
+                    </tbody>
+                </table>
+		</form>
+
+</div>         
+</div>
+
+<?php
+} 
+?>
+
+

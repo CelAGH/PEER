@@ -1,0 +1,17 @@
+/* 
+    Document   : peer-doodle
+    Created on : 2013-02-06, 13:04:28
+    Author     : Jacek
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+label.error {
+    display: inline-block;
+    clear: both;
+    color: red;
+}

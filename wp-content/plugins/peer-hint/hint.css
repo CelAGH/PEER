@@ -1,0 +1,68 @@
+#hint{
+width: 890px;
+height: 120px;
+
+border: 4px #fde43a dashed;
+
+background-color: #fef8d2;
+
+padding-left: 15px;
+
+
+
+color: #002157;
+font-size: inherit;
+font-weight: bold;
+font-family: inherit;
+font-style: inherit;
+text-decoration: inherit;
+-webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+border-radius: 8px;
+
+-moz-box-shadow: 0px 0px 10px 0px #333333;
+-webkit-box-shadow: 0px 0px 10px 0px #333333;
+box-shadow: 0px 0px 10px 0px #333333;
+}
+
+#buddypress-hint{
+width: 580px;
+height: 150px;
+
+border: 4px #fde43a dashed;
+
+background-color: #fef8d2;
+
+padding-left: 15px;
+
+
+
+color: #002157;
+font-size: inherit;
+font-weight: bold;
+font-family: inherit;
+font-style: inherit;
+text-decoration: inherit;
+-webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+border-radius: 8px;
+
+-moz-box-shadow: 0px 0px 10px 0px #333333;
+-webkit-box-shadow: 0px 0px 10px 0px #333333;
+box-shadow: 0px 0px 10px 0px #333333;
+}
+
+#normalhint{
+
+padding-left: 10px;
+
+font-size: inherit;
+font-weight: normal;
+font-family: inherit;
+font-style: inherit;
+text-decoration: inherit;
+color: #002157;
+
+
+}
+
