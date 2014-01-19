@@ -1,112 +1,109 @@
 <?php
-//======PORTUGAL===========//
+//======POLISH===========//
 
 //=====   POSTS   ======//
 
-define ('PSTWELCOME', "Welcome");
-define ('PSTWRITENEW', "Ler e escrever posts no Blog da Comunidade"); //write new post
+define ('PSTWELCOME', "Witaj");
+define ('PSTWRITENEW', "Napisz nowy post");
 
 //=====CREATE POLL=======//
 
-define('CPTITLE', "Title:"); //title
-define('CPTITLEDESC', "Choose a short title"); //Choose a short title
+define('CPTITLE', "Nazwa:");
+define('CPTITLEDESC', "Podaj krótki tytuł");
 
-define('CPWHERE', "Where:"); //Where
-define('CPWHEREDESC', "Indicate the local/venue for the event"); //Indicate the local/venue for the event
+define('CPWHERE', "Miejsce:");
+define('CPWHEREDESC', "Wskaż lokal/miejsce wydarzenia");
 
-define('CPDESC', "Description:"); //Description
-define('CPDESCDESC', "Make short explanation about the event. "); //Make short explanation about the event
+define('CPDESC', "Opis:");
+define('CPDESCDESC', "Podaj krótki opis wydarzenia");
 
-define('CPOWNER', "Owner:"); //Owner
-define('CPAUTHOR', "Author:"); //Author
+define('CPOWNER', "Właściciel:");
+define('CPAUTHOR', "Autor:");
 
-define('CPSELDATES', "Select date"); //Select date
-define('CPSELDATESDESC', "(max 8 possibilities) clicking at the calendar"); //(max 8 possibilities) clicking at the calendar
+define('CPSELDATES', "Wybierz termin");
+define('CPSELDATESDESC', "(max. 8 możliwości) klikając w kalendarz");
 
-define('CPDATES', "Selected dates"); //Selected dates
-define('CPSUBMIT', "Submit:"); //Submit
+define('CPDATES', "Wybrane terminy:");
+define('CPSUBMIT', "Prześlij:");
 
-define('CPTIME', "Time: "); //Time
-define('CPTIMEDESC', "Introduce an hour for each date (ex. 11.30)"); //Introduce an hour for each date (ex. 11.30)
+define('CPTIME', "Czas: ");
+define('CPTIMEDESC', "Wprowadź godzinę dla kolejnych dat");
 
-define('CPDAY', "Day:"); //Day
-
+define('CPDAY', "Dzień:");
+define('CPSUBMIT', 'Prześlij');
 
 //=======REPOSITORY========//
 
-define('REPUPLOAD', "Upload new file"); //Upload new file
-define('REPHEREUCAN', "here you can upload new file."); //here you can upload new file
-define('REPBROWSE', "Browse"); //Browse
-define('REPFILE', "File"); //File
-define('REPFILES', "Files"); //Files
-define('REPADD', "Add new file"); //Add new file
-define('REPREP', "Repository"); //Repository
-define('REPFILENAME', "File name"); //File name
-define('REPDISPLAYNAME', "Display name"); //Display name
-define('REPDATE', "Date"); //Date
-define('REPSIZE', "Size"); //Size
-define('REPOWNER', "Owner"); //Owner
-define('REPREPORT', "Report"); //Report
-define('REPDELETE', "Delete"); //Delete
-define('REPUPLOAD', "Upload file"); //Upload file
-define('REPLOGGED', "You're logged in as"); //You're logged in as
-define('REPPATH', "Path"); //Path
-define('REPBROWSE', "Browse"); //Browse
-define('REPNOFILE', "No files selected"); //No files selected
-define('REPOWNNAME', "Your own file name (display name)"); //Your own file name (display name)
-define('REPUP', "Upload!"); //Upload!
-define('REPNOTE', "Note: "); //Note:
+define('REPUPLOAD', "Dodaj nowy plik");
+define('REPHEREUCAN', "Tutaj możesz dodać plik");
+define('REPBROWSE', "Przeglądaj");
+define('REPFILE', "Plik");
+define('REPFILES', "Pliki");
+define('REPADD', "Dodaj nowy plik");
+define('REPREP', "Repozytorium");
+define('REPFILENAME', "Nazwa pliku");
+define('REPDISPLAYNAME', "Wyświetlana nazwa pliku");
+define('REPDATE', "Data");
+define('REPSIZE', "Rozmiar");
+define('REPOWNER', "Właściciel");
+define('REPREPORT', "Zgłoś nadużycie");
+define('REPDELETE', "Usuń");
+define('REPUPLOAD', "Dodaj plik");
+define('REPLOGGED', "Jesteś zalogowany jako");
+define('REPPATH', "Ścieżka");
+define('REPBROWSE', "Przeglądaj");
+define('REPNOFILE', "Nie wybrano plików");
+define('REPOWNNAME', "Nadaj własną nazwę (wyświetlaną)");
+define('REPUP', "Dodaj!");
+define('REPNOTE', "Informacja: ");
 
 //==========VIDEOMEETING===========//
 
-define ('OMLATESTFLASH', "Certifique-se que está a usar a última versão do Flash."); //Make suer you use the latest Flash verision
-define ('OMJOIN', "Junte-se à reunião"); //Join the meeting
-define ('OMDESC', "Encontre-se on-line com outros Membros da Comunidade usando a videoconferência."); //Meet online with other Community Members using videoconference
+define ('OMLATESTFLASH', "Upewnij się, że korzystasz z najnowszej wersji Flash");
+define ('OMJOIN', "Dołącz do spotkania");
+define ('OMDESC', "Spotkaj się online z innymi Członkami Społeczności");
 
 //==========PARTICIPATE=============//
 
-define ('PTPTITLE', "Title:"); //Title
-define ('PTPDESC', "Description:"); //Description
-define ('PTPWHERE', "Where:"); //Where
-define ('PTPAUTHOR', "Author:"); //Author
-define ('PTPPARTICIP', "Participants:"); //Participants
-define ('PTPCREATED', "Created:"); //Created
-define ('PTPDELPOLL', "Delete"); //Delete
-define ('PTPSAVE', "Save");//Save
-define ('PTPYES', "Yes"); //yes
-define ('PTPNO', "No"); //nie
+define ('PTPTITLE', "Nazwa:");
+define ('PTPDESC', "Opis:");
+define ('PTPWHERE', "Miejsce:");
+define ('PTPAUTHOR', "Autor:");
+define ('PTPPARTICIP', "Uczestnicy:");
+define ('PTPCREATED', "Utworzony:");
+define ('PTPDELPOLL', "Usuń ankietę");
+define ('PTPSAVE', "Zapisz");
+define ('PTPYES', "Tak");
+define ('PTPNO', "Nie");
 
 //===========  CHAT  ============//
 
-define ('CHDESC', "Entre em contato com outros membros da comunidade"); //Get in touch with other community members
-
-define ('CHDESC1', "Na caixa Que há de novo…? pode informar os membros da plataforma sobre a sua notícia. Não se esqueça de pressionar `Post`. Ao clicar em `comentário` pode reagir a outras mensagens"); //In the box What’s new …? you have the chance to inform the platform members about your news. Don’t forget to press ‘Post’. By clicking on ‘comment’ you can react on others posts
-
-define ('CHWHATNEW', "O que há de novo "); //What's new
-define ('CHPOSTDESC', "Se quiser escrever para uma determinada pessoa, digite @nome de utilizador (por exemplo @joao)"); //If you want to write to a specific person type @username (e.g. @john)
- 
-define ('CHPOST', "Post"); //Post
-define ('CHMORE', "Carregar mais"); //Load more
-define ('CHNOENTRIES', "Sorry, there was no activity found. Please try a different filter."); //Sorry, there was no activity found. Please try a different filter.
-define ('CHCOMMENT', "Comentário"); //Comment
-define ('CHFAVORITE', "Favorito"); //Favourite
-define ('CHDELETE', "Apagar"); //Delete
-define ('CHALLCHATS', "Todos os chats"); //All chats
-define ('CHNOTIF', "Notificações"); //Notifications
-define ('CHPOSTED', "enviou uma atualização"); //posted an update
+define ('CHDESC', "Talkmaster: Bądź w kontakcie z pozostałymi Członkami Społeczności");
+define ('CHDESC1', "Pisz wiadomości do pozostałych Członków Społeczności w okienku poniżej. Naciśnij `Wyślij` żeby je opublikować. Naciśnij `Komentuj`, żeby odpowiedzieć na wiadomości innych");
+define ('CHWHATNEW', "Co nowego ");
+define ('CHPOSTDESC', "Jeśli chcesz napisać do konkretnej osoby  napisz @nazwaużytkownika (np. @Jan)");
+define ('CHPOST', "Wyślij");
+define ('CHMORE', "Załaduj więcej"); //Load more
+define ('CHNOENTRIES', "Brak wpisów"); //Sorry, there was no activity found. Please try a different filter.
+define ('CHCOMMENT', "Komentuj");
+define ('CHFAVORITE', "Ulubione");
+define ('CHDELETE', "Usuń");
+define ('CHALLCHATS', "Wszystkie czaty");
+define ('CHNOTIF', "Powiadomienia");
+define ('CHPOSTED', "opublikował/a wiadomość");
 
 //=========== MEMBERS ============//
-define ('MEMMEMBERS', "Membros"); //Members
-define ('MEMACTIVEMEM', "Membro ativo"); //Active Member
-define ('MEMVIEWING', "Vendo os membros "); //Viewing Member
-define ('MEMVIEWINGOF', "de"); //of 
-define ('MEMVIEWINGOFACTIVE', "membros ativos"); //
-define ('MEMALLMEM', "Todos os membros"); //All members
-define ('MEMSEARCHMEM', "Procure membros"); //Search members...
-define ('MEMSEARCH', "Procure"); //Search
-define ('MEMORDER', "Ordenado por"); //Order by:
-define ('MEMORDERLAST', "recente"); //last added
-define ('MEMORDERALPHA', "Alfabético"); //alphabetical
-define ('MEMORDERNEWEST', "Registo mais recente"); //Newest registered
+define ('MEMMEMBERS', "Użytkownicy");
+define ('MEMACTIVEMEM', "Aktywni użytkownicy");
+define ('MEMVIEWING', "Pokaż użytkowników ");
+define ('MEMVIEWINGOF', "z");
+define ('MEMVIEWINGOFACTIVE', "aktywnych użytkowników");
+define ('MEMALLMEM', "Wszyscy użytkownicy");
+define ('MEMSEARCHMEM', "Szukaj użytkownika");
+define ('MEMSEARCH', "Szukaj");
+define ('MEMORDER', "Sortuj wg:");
+define ('MEMORDERLAST', "Ostatnio dodane");
+define ('MEMORDERALPHA', "Alfabetycznie");
+define ('MEMORDERNEWEST', "Ostatnio zarejestrowany");
 
 ?>
