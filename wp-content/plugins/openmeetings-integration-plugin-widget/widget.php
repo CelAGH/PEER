@@ -1,7 +1,6 @@
 <?php
 function Openmeetingswidget( $instance )
 {
-include ('../wp-config.php');
 //	Loading wordpress logged in user
 global $current_user;
 get_currentuserinfo();
@@ -49,7 +48,7 @@ $Res = $SoapUsers->loginUser(array('SID' => $idSession, 'username' => $omadmin, 
 				//	URL display
 	?>
 
-<b><?php echo OMDESC; ?></b>
+<b>Meet online with other Community Members using videoconference</b>
 <br><br><b><a href="http://<?php print $Url;?>/?secureHash=<?php print $Res->return; ?>" target="_blank">
 	
 <?php
@@ -66,5 +65,5 @@ else
 </a>
 <br>
 <br>
-<a href="http://get.adobe.com/flashplayer/"><i><?php echo OMLATESTFLASH; ?></i></a>
+Make sure you use <a href="http://get.adobe.com/flashplayer/"><i>latest flash version</i></a>
 <?php } ?>

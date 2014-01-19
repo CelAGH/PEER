@@ -1,5 +1,4 @@
 <?php
-include ('../wp-config.php');
 /**
  * Plugin Name: Openmeetings Widget
  * Description: Openmeetings
@@ -88,9 +87,7 @@ class Openmeetings_Widget extends WP_Widget {
 		$instance['admin'] = strip_tags( $new_instance['admin'] );
 		$instance['password'] = strip_tags( $new_instance['password'] );
 		$instance['roomid'] = strip_tags( $new_instance['roomid'] );
-		//$instance['widget_text'] = strip_tags( $new_instance['widget_text'] );
-		$instance['widget_text'] = OMJOIN;
-		
+		$instance['widget_text'] = strip_tags( $new_instance['widget_text'] );
 		$instance['widget_imgurl'] = strip_tags( $new_instance['widget_imgurl'] );
 		$instance['title'] = strip_tags( $new_instance['title'] );
 
@@ -110,7 +107,7 @@ class Openmeetings_Widget extends WP_Widget {
 		'admin' => __('admin', 'admin'),
 		'password' => __('password', 'example'),
 		'roomid' => __('', 'example'),
-		'widget_text' => OMJOIN,
+		'widget_text' => __('Chat now!', 'example'),
 		'widget_imgurl' => __('URL', 'example'),
 		'title' => __('Openmeetings', 'example'));
 		
@@ -141,8 +138,7 @@ class Openmeetings_Widget extends WP_Widget {
 		<!-- Widget widget_text: Text Input -->
 		<p>
 			<label for="<?php echo $this->get_field_id( 'widget_text' ); ?>"><?php _e('widget_text:', 'Chat now!'); ?></label>
-			<input id="<?php echo $this->get_field_id( 'widget_text' ); ?>" name="<?php echo $this->get_field_name( 'widget_text' ); ?>" value="
-<?php echo $instance['widget_text']; ?>" style="width:100%;" />
+			<input id="<?php echo $this->get_field_id( 'widget_text' ); ?>" name="<?php echo $this->get_field_name( 'widget_text' ); ?>" value="<?php echo $instance['widget_text']; ?>" style="width:100%;" />
 		</p>
 		<!-- Widget widget_imgurl: Image URL Input -->
 		<p>

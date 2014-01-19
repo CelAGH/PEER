@@ -41,21 +41,6 @@ $visibility = $doodle->getVisible();
 
 //$visibility = 1;
 if ($visibility == 1){
-
-$title = $doodle->getTitle();
-$title = stripslashes($title);
-
-$desc = $doodle->getDescription();
-$desc = stripslashes($desc);
-
-$loc = $doodle->getLocation();
-$loc = stripslashes($loc);
-
-$usrnm = $doodle->getUsername();
-$usrnm = stripslashes($usrnm);
-
-$nop = $doodle->getNumberOfParticipants();
-$nop = stripslashes($nop);
 ?>
 
 <div id="peerPoll">
@@ -63,15 +48,15 @@ $nop = stripslashes($nop);
 <div class="datagrid" >
                 <table>
 			<tbody>
-			<tr class="title"><td colspan="5"><font size="3"><b><?php echo PTPTITLE; ?></b> <?php echo $doodle->getTitle();?></font></td></tr>
-			<tr class="alt"><td colspan="5" ><b><?php echo PTPDESC; ?></b> <?php echo $doodle->getDescription();?></td></tr>
+			<tr class="title"><td colspan="5"><font size="3"><b>Title:</b> <?php echo $doodle->getTitle();?></font></td></tr>
+			<tr class="alt"><td colspan="5" ><b>Description:</b> <?php echo $doodle->getDescription();?></td></tr>
 			<tr>
-				<td><b><?php echo PTPWHERE; ?></b> <?php echo $doodle->getLocation();?></td>
-				<td><b><?php echo PTPAUTHOR; ?></b> <?php echo $doodle->getUsername();?></td>
-				<td><b><?php echo PTPPARTICIP; ?></b> <?php echo $doodle->getNumberOfParticipants();?></td>
+				<td><b>Where:</b> <?php echo $doodle->getLocation();?></td>
+				<td><b>Author:</b> <?php echo $doodle->getUsername();?></td>
+				<td><b>Participants:</b> <?php echo $doodle->getNumberOfParticipants();?></td>
 				<td><?php $poll_latest_change = $doodle->getLatestChange(); 
 	       			$poll_latest_change = substr($poll_latest_change, 0, -15); ?>
-	 				<b><?php echo PTPCREATED; ?></b> <?php echo $poll_latest_change; ?></td>
+	 				<b>Created:</b> <?php echo $poll_latest_change; ?></td>
 				<td><p align="center">
 		<?php
 		if ($current_user->user_login == $doodle->getUsername()){
@@ -79,7 +64,7 @@ $nop = stripslashes($nop);
                 <form action="" method="get">
 			 <input type="hidden" name="action_name" value="delete_poll"/>
 			 <input type="hidden" name="poll_name" value="<?php echo $doodle->getTitle();?>"/>
-           		 <input type="submit" value="<?php echo PTPDELPOLL; ?>" />
+           		 <input type="submit" value="Delete poll" />
                 </form> 
 		<?php
 		} 
@@ -202,9 +187,9 @@ $nop = stripslashes($nop);
                                      foreach($votes['option'] as $opts) { ?>
                                         <td>
                                             <?php if($opts == 1) {?>
-                                                <img src="./../wp-content/plugins/peer-doodle/images/yes.png"><br><?php echo PTPYES; ?>
+                                                <img src="./../wp-content/plugins/peer-doodle/images/yes.png"><br>Yes
                                             <?php }else {?>
-                                                <img src="./../wp-content/plugins/peer-doodle/images/no.png"><br><?php echo PTPNO; ?>
+                                                <img src="./../wp-content/plugins/peer-doodle/images/no.png"><br>No
 
                                             <?php }?>
                                         </td>
@@ -242,7 +227,7 @@ $nop = stripslashes($nop);
                                 <?php for($i=0;$i<count($options['dates']);$i++ ) {
                                     if($i == (count($options['dates'])-1)){ ?>
                                         <td>
-                                            <input class="dpc_submit_participant button button-primary" type="submit" value="<?php echo PTPSAVE ?>" name="dpc_submit_participant" />
+                                            <input class="dpc_submit_participant button button-primary" type="submit" value="Save" name="dpc_submit_participant" />
                                         </td>
                                 <?php
                                     } else {?>

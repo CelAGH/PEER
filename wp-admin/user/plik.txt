@@ -1,0 +1,9 @@
+about.php
+admin.php
+credits.php
+freedoms.php
+index.php
+menu.php
+plik.txt
+profile.php
+user-edit.php

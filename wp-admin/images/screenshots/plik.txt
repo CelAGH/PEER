@@ -1,0 +1,5 @@
+about-color-picker.png
+about-media.png
+about-retina.png
+about-twenty-twelve.png
+plik.txt

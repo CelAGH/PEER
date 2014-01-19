@@ -2601,11 +2601,10 @@ function esc_url( $url, $protocols = null, $_context = 'display' ) {
 
 	if ( ! is_array( $protocols ) )
 		$protocols = wp_allowed_protocols();
-	$good_protocol_url = wp_kses_bad_protocol( $url, $protocols );
-	if ( strtolower( $good_protocol_url ) != strtolower( $url ) )
+	if ( wp_kses_bad_protocol( $url, $protocols ) != $url )
 		return '';
 
-	return apply_filters('clean_url', $good_protocol_url, $original_url, $_context);
+	return apply_filters('clean_url', $url, $original_url, $_context);
 }
 
 /**
@@ -2870,7 +2869,7 @@ function sanitize_option($option, $value) {
 
 		case 'illegal_names':
 			if ( ! is_array( $value ) )
-				$value = explode( ' ', $value );
+				$value = explode( "\n", $value );
 
 			$value = array_values( array_filter( array_map( 'trim', $value ) ) );
 

@@ -343,13 +343,13 @@ function bp_members_pagination_count() {
 		$total     = bp_core_number_format( $members_template->total_member_count );
 
 		if ( 'active' == $members_template->type )
-			$pag = sprintf( __( MEMVIEWING.'%1$s to %2$s ('.MEMVIEWINGOF.' %3$s '.MEMVIEWINGOFACTIVE.')', 'buddypress' ), $from_num, $to_num, $total );
+			$pag = sprintf( __( 'Viewing member %1$s to %2$s (of %3$s active members)', 'buddypress' ), $from_num, $to_num, $total );
 		else if ( 'popular' == $members_template->type )
-			$pag = sprintf( __( MEMVIEWING.'%1$s to %2$s ('.MEMVIEWINGOF.' %3$s '.MEMVIEWINGOFACTIVE.')', 'buddypress' ), $from_num, $to_num, $total );
+			$pag = sprintf( __( 'Viewing member %1$s to %2$s (of %3$s members with friends)', 'buddypress' ), $from_num, $to_num, $total );
 		else if ( 'online' == $members_template->type )
-			$pag = sprintf( __( MEMVIEWING.'%1$s to %2$s ('.MEMVIEWINGOF.' %3$s '.MEMVIEWINGOFACTIVE.')', 'buddypress' ), $from_num, $to_num, $total );
+			$pag = sprintf( __( 'Viewing member %1$s to %2$s (of %3$s members online)', 'buddypress' ), $from_num, $to_num, $total );
 		else
-			$pag = sprintf( __( MEMVIEWING.'%1$s to %2$s ('.MEMVIEWINGOF.' %3$s '.MEMVIEWINGOFACTIVE.')', 'buddypress' ), $from_num, $to_num, $total );
+			$pag = sprintf( __( 'Viewing member %1$s to %2$s (of %3$s members)', 'buddypress' ), $from_num, $to_num, $total );
 
 		return apply_filters( 'bp_members_pagination_count', $pag );
 	}
@@ -706,7 +706,7 @@ function bp_directory_members_search_form() {
 
 	<form action="" method="get" id="search-members-form">
 		<label><input type="text" name="s" id="members_search" placeholder="<?php echo esc_attr( $search_value ) ?>" /></label>
-		<input type="submit" id="members_search_submit" name="members_search_submit" value="<?php _e( MEMSEARCH, 'buddypress' ) ?>" />
+		<input type="submit" id="members_search_submit" name="members_search_submit" value="<?php _e( 'Search', 'buddypress' ) ?>" />
 	</form>
 
 <?php

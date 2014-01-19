@@ -14,7 +14,7 @@
 
 		<div class="item-list-tabs" role="navigation">
 			<ul>
-				<li class="selected" id="members-all"><a href="<?php bp_members_directory_permalink(); ?>"><?php echo MEMMEMBERS; printf( __( '<span>%s</span>', 'buddypress' ), bp_get_total_member_count() ); ?></a></li>
+				<li class="selected" id="members-all"><a href="<?php bp_members_directory_permalink(); ?>"><?php printf( __( 'All Members <span>%s</span>', 'buddypress' ), bp_get_total_member_count() ); ?></a></li>
 
 				<?php if ( is_user_logged_in() && bp_is_active( 'friends' ) && bp_get_total_friend_count( bp_loggedin_user_id() ) ) : ?>
 					<li id="members-personal"><a href="<?php echo bp_loggedin_user_domain() . bp_get_friends_slug() . '/my-friends/'; ?>"><?php printf( __( 'My Friends <span>%s</span>', 'buddypress' ), bp_get_total_friend_count( bp_loggedin_user_id() ) ); ?></a></li>
@@ -30,13 +30,13 @@
 				<?php do_action( 'bp_members_directory_member_sub_types' ); ?>
 
 				<li id="members-order-select" class="last filter">
-					<label for="members-order-by"><?php _e( MEMORDER, 'buddypress' ); ?></label>
+					<label for="members-order-by"><?php _e( 'Order By:', 'buddypress' ); ?></label>
 					<select id="members-order-by">
-						<option value="active"><?php _e( MEMORDERLAST, 'buddypress' ); ?></option>
-						<option value="newest"><?php _e( MEMORDERNEWEST, 'buddypress' ); ?></option>
+						<option value="active"><?php _e( 'Last Active', 'buddypress' ); ?></option>
+						<option value="newest"><?php _e( 'Newest Registered', 'buddypress' ); ?></option>
 
 						<?php if ( bp_is_active( 'xprofile' ) ) : ?>
-							<option value="alphabetical"><?php _e( MEMORDERALPHA, 'buddypress' ); ?></option>
+							<option value="alphabetical"><?php _e( 'Alphabetical', 'buddypress' ); ?></option>
 						<?php endif; ?>
 
 						<?php do_action( 'bp_members_directory_order_options' ); ?>

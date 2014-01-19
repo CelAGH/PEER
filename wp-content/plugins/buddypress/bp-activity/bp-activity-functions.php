@@ -1089,7 +1089,7 @@ function bp_activity_post_update( $args = '' ) {
 
 	// Record this on the user's profile
 	$from_user_link   = bp_core_get_userlink( $user_id );
-	$activity_action  = sprintf( __( '%s'+CHPOSTED, 'buddypress' ), $from_user_link );
+	$activity_action  = sprintf( __( '%s posted an update', 'buddypress' ), $from_user_link );
 	$activity_content = $content;
 	$primary_link     = bp_core_get_userlink( $user_id, false, true );
 

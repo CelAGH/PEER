@@ -170,7 +170,6 @@
 				icontag:    'dt',
 				captiontag: 'dd',
 				columns:    '3',
-				link:       'post',
 				size:       'thumbnail',
 				orderby:    'menu_order ID'
 			},

@@ -22,17 +22,17 @@
 	<p class="activity-greeting"><?php if ( bp_is_group() )
 		printf( __( "What's new in %s, %s?", 'buddypress' ), bp_get_group_name(), bp_get_user_firstname() );
 	else
-		echo CHWHATNEW; printf( __( "%s?", 'buddypress' ), bp_get_user_firstname() );
+		printf( __( "What's new, %s?", 'buddypress' ), bp_get_user_firstname() );
 	?></p>
 
 	<div id="whats-new-content">
 		<div id="whats-new-textarea">
 			<textarea name="whats-new" id="whats-new" cols="50" rows="10"><?php if ( isset( $_GET['r'] ) ) : ?>@<?php echo esc_attr( $_GET['r'] ); ?> <?php endif; ?></textarea>
-			<i><?php echo CHPOSTDESC; ?></i>
+			<i>If you want to write to a specific person type @username (e.g. @john)</i>
 		</div>
 
 		<div id="whats-new-submit">
-			<input type="submit" name="aw-whats-new-submit" id="aw-whats-new-submit" value="<?php _e( CHPOST, 'buddypress' ); ?>" />
+			<input type="submit" name="aw-whats-new-submit" id="aw-whats-new-submit" value="<?php _e( 'Post', 'buddypress' ); ?>" />
 		</div>
 
 		<div id="whats-new-options">

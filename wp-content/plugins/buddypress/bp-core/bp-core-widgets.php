@@ -44,7 +44,7 @@ class BP_Core_Members_Widget extends WP_Widget {
 
 		<?php if ( bp_has_members( 'user_id=0&type=' . $instance['member_default'] . '&max=' . $instance['max_members'] . '&populate_extras=1' ) ) : ?>
 			<div class="item-options" id="members-list-options">
-				<?php _e( MEMACTIVEMEM, 'buddypress' ) ?><a href="<?php echo site_url( bp_get_members_root_slug() ); ?>" id="recently-active-members" <?php if ( $instance['member_default'] == 'active' ) : ?>class="selected"<?php endif; ?>></a>
+				<?php _e( 'Active Members', 'buddypress' ) ?><a href="<?php echo site_url( bp_get_members_root_slug() ); ?>" id="recently-active-members" <?php if ( $instance['member_default'] == 'active' ) : ?>class="selected"<?php endif; ?>></a>
 				<br><br>
 				<?php if ( bp_is_active( 'friends' ) ) : ?>
 

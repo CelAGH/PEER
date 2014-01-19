@@ -1,0 +1,6 @@
+bp-custom.php
+index.php
+plik.txt
+plugins
+themes
+uploads

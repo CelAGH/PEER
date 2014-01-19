@@ -73,8 +73,12 @@ function placenames($fh,$itm,$alnav,$aldw,$pnme_sepa){
 
 $ou="";
 $temp=str_ireplace($fh,"",$itm["path"]);
+$aaa = $temp;
+//echo $aaa;
+$bbb = substr($aaa, 1);
+$temp = substr($temp, 1); 
+//$temp = $bbb;
   //$ou.="<td>";
-$temp = substr($temp, 1);
 $filename = trim(strrchr($temp, "/"),"/");
   if(($itm["is_dir"] && $alnav=="true")||(!$itm["is_dir"] && $aldw=="true"))
 	$ou.="<a href='".$pnme_sepa."g=".$temp."'>".$filename."</a>";
@@ -474,12 +478,13 @@ $stuff=$dropbox->metadata($forcedhome.$where,1000,false,true,false);
 
 $stuff=$stuff["contents"];
 
-echo $stuff["contents"];
+//echo $stuff["contents"];
 
 foreach($stuff as &$thing )
 {
  
-$thing['modified']=strtotime($thing['modified']);}
+$thing['modified']=strtotime($thing['modified']);
+}
 
 ///////////////////////////SORTOWANIE/////////////////////////////////
 $orderby = "filename";

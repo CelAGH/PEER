@@ -160,8 +160,6 @@ class DPC_Doodle_Poll {
         // print_r($opts);print_r("<br>");
         $participant->appendChild($username);
         $participant->appendChild($xmlopts);
-
-	 $xmlopts = addslashes($xmlopts);
         
         //print_r($participant);
         $participants->item(0)->appendChild($participant);
@@ -231,23 +229,14 @@ class DPC_Doodle_Poll {
     public function build_xml() {
         //print_r($domtree);
         /* create the root element of the xml tree */
-	 $desc = str_replace("\"", " ", $this->description);
-	 $desc = str_replace("\'", " ", $desc);
-
-	 $wher = str_replace("\"", " ", $this->loaction);
-	 $wher = str_replace("\'", " ", $wher);
-
-	 $titl = str_replace("\"", " ", $this->title);
-	 $titl = str_replace("\"", " ", $titl);
-
         $xmlRoot = $this->doc->createElement("poll");
         $xmlRoot->appendChild($this->doc->createAttribute("xmlns"))->appendChild($this->doc->createTextNode("http://doodle.com/xsd1"));
         $xmlRoot->appendChild($this->doc->createElement("latestchange", $this->latestchange));
         $xmlRoot->appendChild($this->doc->createElement("type", "DATE"));
         $xmlRoot->appendChild($this->doc->createElement("state", "OPEN"));
-        $xmlRoot->appendChild($this->doc->createElement("title", $titl));
-        $xmlRoot->appendChild($this->doc->createElement("description", $desc));
-	 $xmlRoot->appendChild($this->doc->createElement("location", $wher));
+        $xmlRoot->appendChild($this->doc->createElement("title", $this->title));
+        $xmlRoot->appendChild($this->doc->createElement("description", $this->description));
+	 $xmlRoot->appendChild($this->doc->createElement("location", $this->location));
 
         //initiator    
         $initiator = $this->doc->createElement("initiator");

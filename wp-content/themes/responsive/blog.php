@@ -62,7 +62,7 @@ global $more; $more = 0;
 
 	endif; 
 	?>  
-      <a href="./../wp-admin/post-new.php"><button><?php echo PSTWRITENEW; ?></button></a>
+      <a href="./../wp-admin/post-new.php"><button>Write new post</button></a>
 </div><!-- end of #content-full -->
 
 <!---- --------------------------------------------------------------------------------------- ---->

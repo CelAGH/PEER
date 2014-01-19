@@ -1,0 +1,39 @@
+ Wolumin w stacji C nie ma etykiety.
+ Numer seryjny woluminu: 6A22-4CDD
+
+ Katalog: c:\Users\Chuck\Desktop\peer_en
+
+2013-12-08  16:18    <DIR>          .
+2013-12-08  16:18    <DIR>          ..
+2013-11-11  23:30               238 .htaccess
+2013-08-27  22:59               396 index.php
+2013-10-09  21:14               828 lang-pl.php~
+2013-10-29  23:43             5ÿ151 lang.php
+2013-10-29  23:40             5ÿ369 lang.php~
+2012-05-06  07:28            19ÿ544 license.txt
+2013-11-18  13:23           853ÿ611 peer_en.sql
+2013-12-08  16:18                 0 plik.txt
+2013-01-24  21:50             9ÿ177 readme.html
+2013-11-12  15:56            21ÿ595 tdp_main.php
+2012-11-17  16:11             4ÿ663 wp-activate.php
+2013-12-08  14:28    <DIR>          wp-admin
+2012-01-08  18:01               271 wp-blog-header.php
+2012-04-10  17:21             3ÿ522 wp-comments-post.php
+2010-11-01  15:45             3ÿ087 wp-config-sample.php
+2013-11-12  16:07             5ÿ561 wp-config.php
+2013-10-29  23:32             5ÿ488 wp-config.php~
+2013-12-08  14:26    <DIR>          wp-content
+2012-09-23  16:57             2ÿ718 wp-cron.php
+2013-12-08  14:27    <DIR>          wp-dropbox
+2013-12-08  14:28    <DIR>          wp-includes
+2010-10-23  12:17             1ÿ997 wp-links-opml.php
+2012-10-26  19:40             2ÿ408 wp-load.php
+2012-11-30  14:40            29ÿ310 wp-login.php
+2012-09-25  05:26             7ÿ723 wp-mail.php
+2012-11-22  10:52             9ÿ899 wp-settings.php
+2012-09-11  12:27            18ÿ219 wp-signup.php
+2012-01-08  18:01             3ÿ700 wp-trackback.php
+2013-09-19  08:38               642 wyrazenia.php
+2012-09-11  20:11             2ÿ719 xmlrpc.php
+              26 plik(¢w)          1ÿ017ÿ836 bajt¢w
+               6 katalog(¢w)  297ÿ912ÿ942ÿ592 bajt¢w wolnych
