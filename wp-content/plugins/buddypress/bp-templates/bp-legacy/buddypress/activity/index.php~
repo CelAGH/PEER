@@ -2,8 +2,8 @@
 
 
 <div id="buddypress">
-	<div id="buddypress-hint"><p> Get in touch with other Community Members </p><div id="normalhint">
-<p>Post your news to the Community members in the window below. Press "post" to publish it. Press "Comment" to reply to others' news</p>	</div>
+	<div id="buddypress-hint"><p><?php echo CHDESC;?> </p><div id="normalhint">
+<p><?php echo CHDESC1;?> </p>	</div>
 	</div>
 	<?php do_action( 'bp_before_directory_activity_content' ); ?>
 	<br>
@@ -19,7 +19,7 @@
 		<ul>
 			<?php do_action( 'bp_before_activity_type_tab_all' ); ?>
 
-			<li class="selected" id="activity-all"><a href="<?php bp_activity_directory_permalink(); ?>" title="<?php _e( 'The public activity for everyone on this site.', 'buddypress' ); ?>"><?php printf( __( 'All Chats <span>%s</span>', 'buddypress' ), bp_get_total_member_count() ); ?></a></li>
+			<li class="selected" id="activity-all"><a href="<?php bp_activity_directory_permalink(); ?>" title="<?php _e( 'The public activity for everyone on this site.', 'buddypress' ); ?>"><?php echo CHALLCHATS; printf( __( '<span>%s</span>', 'buddypress' ), bp_get_total_member_count() ); ?></a></li>
 
 			<?php if ( is_user_logged_in() ) : ?>
 

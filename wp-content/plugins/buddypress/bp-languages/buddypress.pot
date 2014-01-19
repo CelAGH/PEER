@@ -498,7 +498,7 @@ msgid "Replied to a status update"
 msgstr ""
 
 #: bp-activity/bp-activity-functions.php:1092
-msgid "%s posted an update"
+msgid "%s"+CHPOSTED
 msgstr ""
 
 #: bp-activity/bp-activity-functions.php:1161

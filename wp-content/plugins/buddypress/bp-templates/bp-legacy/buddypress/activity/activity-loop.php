@@ -25,7 +25,7 @@
 	<?php if ( bp_activity_has_more_items() ) : ?>
 
 		<li class="load-more">
-			<a href="#more"><?php _e( 'Load More', 'buddypress' ); ?></a>
+			<a href="#more"><?php _e( CHMORE, 'buddypress' ); ?></a>
 		</li>
 
 	<?php endif; ?>

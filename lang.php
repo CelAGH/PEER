@@ -3,59 +3,59 @@
 
 //=====   POSTS   ======//
 
-define ('PSTWELCOME', "Welcome");
+define ('PSTWELCOME', "Bem-vindo");
 define ('PSTWRITENEW', "Ler e escrever posts no Blog da Comunidade"); //write new post
 
 //=====CREATE POLL=======//
 
-define('CPTITLE', "Title:"); //title
-define('CPTITLEDESC', "Choose a short title"); //Choose a short title
+define('CPTITLE', "Título:"); //title
+define('CPTITLEDESC', "Título"); //Choose a short title
 
-define('CPWHERE', "Where:"); //Where
-define('CPWHEREDESC', "Indicate the local/venue for the event"); //Indicate the local/venue for the event
+define('CPWHERE', "Onde:"); //Where
+define('CPWHEREDESC', "Indicar o local para o evento"); //Indicate the local/venue for the event
 
-define('CPDESC', "Description:"); //Description
-define('CPDESCDESC', "Make short explanation about the event. "); //Make short explanation about the event
+define('CPDESC', "Descrição:"); //Description
+define('CPDESCDESC', "Faça uma breve explicação sobre o evento. "); //Make short explanation about the event
 
-define('CPOWNER', "Owner:"); //Owner
-define('CPAUTHOR', "Author:"); //Author
+define('CPOWNER', "Proprietário:"); //Owner
+define('CPAUTHOR', "Autor:"); //Author
 
-define('CPSELDATES', "Select date"); //Select date
-define('CPSELDATESDESC', "(max 8 possibilities) clicking at the calendar"); //(max 8 possibilities) clicking at the calendar
+define('CPSELDATES', "Selecionar datas"); //Select date
+define('CPSELDATESDESC', "Selecione as datas (max 8 possibilidades) clicando no calendário"); //(max 8 possibilities) clicking at the calendar
 
-define('CPDATES', "Selected dates"); //Selected dates
-define('CPSUBMIT', "Submit:"); //Submit
+define('CPDATES', "Datas selecionadas"); //Selected dates
+define('CPSUBMIT', "Submeter votação:"); //Submit
 
-define('CPTIME', "Time: "); //Time
-define('CPTIMEDESC', "Introduce an hour for each date (ex. 11.30)"); //Introduce an hour for each date (ex. 11.30)
+define('CPTIME', "Tempo: "); //Time
+define('CPTIMEDESC', "Intoduza uma hora para cada data (ex: 11:30)"); //Introduce an hour for each date (ex. 11.30)
 
-define('CPDAY', "Day:"); //Day
+define('CPDAY', "Dia:"); //Day
 
 
 //=======REPOSITORY========//
 
-define('REPUPLOAD', "Upload new file"); //Upload new file
-define('REPHEREUCAN', "here you can upload new file."); //here you can upload new file
-define('REPBROWSE', "Browse"); //Browse
-define('REPFILE', "File"); //File
-define('REPFILES', "Files"); //Files
-define('REPADD', "Add new file"); //Add new file
-define('REPREP', "Repository"); //Repository
-define('REPFILENAME', "File name"); //File name
-define('REPDISPLAYNAME', "Display name"); //Display name
-define('REPDATE', "Date"); //Date
-define('REPSIZE', "Size"); //Size
-define('REPOWNER', "Owner"); //Owner
-define('REPREPORT', "Report"); //Report
-define('REPDELETE', "Delete"); //Delete
-define('REPUPLOAD', "Upload file"); //Upload file
-define('REPLOGGED', "You're logged in as"); //You're logged in as
-define('REPPATH', "Path"); //Path
-define('REPBROWSE', "Browse"); //Browse
-define('REPNOFILE', "No files selected"); //No files selected
-define('REPOWNNAME', "Your own file name (display name)"); //Your own file name (display name)
-define('REPUP', "Upload!"); //Upload!
-define('REPNOTE', "Note: "); //Note:
+define('REPUPLOAD', "Carregar novo arquivo"); //Upload new file
+define('REPHEREUCAN', "Aqui pode carregar um novo arquivo."); //here you can upload new file
+define('REPBROWSE', "Procurar"); //Browse
+define('REPFILE', "Arquivo"); //File
+define('REPFILES', "Arquivos"); //Files
+define('REPADD', "Adicionar novo ficheiro"); //Add new file
+define('REPREP', "Repositório"); //Repository
+define('REPFILENAME', "Nome do ficheiro"); //File name
+define('REPDISPLAYNAME', "Mostrar o nome"); //Display name
+define('REPDATE', "Data"); //Date
+define('REPSIZE', "Tamanho"); //Size
+define('REPOWNER', "Proprietário"); //Owner
+define('REPREPORT', "Relatório"); //Report
+define('REPDELETE', "Apagar"); //Delete
+define('REPUPLOAD', "Carregar ficheiro"); //Upload file
+define('REPLOGGED', "Está registado como"); //You're logged in as
+define('REPPATH', "Caminho do ficheiro"); //Path
+define('REPBROWSE', "Procurar"); //Browse
+define('REPNOFILE', "Nenhum ficheiro selecionado"); //No files selected
+define('REPOWNNAME', "O seu próprio nome de ficheiro (mostrar nome)"); //Your own file name (display name)
+define('REPUP', "Carregar!"); //Upload!
+define('REPNOTE', "Nota: "); //Note:
 
 //==========VIDEOMEETING===========//
 
@@ -65,16 +65,16 @@ define ('OMDESC', "Encontre-se on-line com outros Membros da Comunidade usando a
 
 //==========PARTICIPATE=============//
 
-define ('PTPTITLE', "Title:"); //Title
-define ('PTPDESC', "Description:"); //Description
-define ('PTPWHERE', "Where:"); //Where
-define ('PTPAUTHOR', "Author:"); //Author
-define ('PTPPARTICIP', "Participants:"); //Participants
-define ('PTPCREATED', "Created:"); //Created
-define ('PTPDELPOLL', "Delete"); //Delete
-define ('PTPSAVE', "Save");//Save
-define ('PTPYES', "Yes"); //yes
-define ('PTPNO', "No"); //nie
+define ('PTPTITLE', "Título:"); //Title
+define ('PTPDESC', "Descrição:"); //Description
+define ('PTPWHERE', "Onde:"); //Where
+define ('PTPAUTHOR', "Autor:"); //Author
+define ('PTPPARTICIP', "Participantes:"); //Participants
+define ('PTPCREATED', "Criado:"); //Created
+define ('PTPDELPOLL', "Apagar"); //Delete
+define ('PTPSAVE', "Submeter");//Save
+define ('PTPYES', "Sim"); //yes
+define ('PTPNO', "Não"); //nie
 
 //===========  CHAT  ============//
 

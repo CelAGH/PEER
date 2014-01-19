@@ -55,17 +55,18 @@ class BP_Members_Component extends BP_Component {
 	 * @global BuddyPress $bp The one true BuddyPress instance
 	 */
 	function setup_globals() {
+		include ('../wp-config.php');
 		global $bp;
 
 		// Define a slug, if necessary
 		if ( !defined( 'BP_MEMBERS_SLUG' ) )
 			define( 'BP_MEMBERS_SLUG', $this->id );
-
+		$aaa = " ";
 		$globals = array(
 			'slug'          => BP_MEMBERS_SLUG,
 			'root_slug'     => isset( $bp->pages->members->slug ) ? $bp->pages->members->slug : BP_MEMBERS_SLUG,
 			'has_directory' => true,
-			'search_string' => __( 'Search Members...', 'buddypress' ),
+			'search_string' => __( "$aaa", 'buddypress' ),
 		);
 
 		parent::setup_globals( $globals );
